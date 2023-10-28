@@ -67,5 +67,4 @@ return (
     </section>
   );
 }
-
 export default App;
