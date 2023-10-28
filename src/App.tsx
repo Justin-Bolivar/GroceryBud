@@ -1,8 +1,27 @@
 import './App.css'
 
+
+interface Item {
+  name: string;
+  completed: boolean;
+  id: string;
+}
+
+const getLocalStorage = () => {
+  const list = localStorage.getItem('list');
+  if (list) {
+    return JSON.parse(list) as Item[];
+  } else {
+    return [] as Item[];
+  }
+}
+
+const setLocalStorage = (items: Item[]) => {
+  localStorage.setItem('list', JSON.stringify(items));
+}
+
+
 function App() {
-
-
   return (
     <div id="root">
       <section className="section-center">
