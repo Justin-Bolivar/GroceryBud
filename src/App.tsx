@@ -20,6 +20,7 @@ const setLocalStorage = (items: Item[]) => {
   localStorage.setItem('list', JSON.stringify(items));
 }
 
+const defaultList: Item[] = getLocalStorage();
 
 function App() {
   return (
