@@ -16,3 +16,6 @@ const Form: React.FC<FormProps> = ({ addItem }) => {
     addItem(newItemName);
     setNewItemName('');
   };
+
+
+export default Form;
